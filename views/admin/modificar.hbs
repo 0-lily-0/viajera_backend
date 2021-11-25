@@ -1,0 +1,42 @@
+<div id="contenedor">
+    <section>
+        <h2>Modificación de novedad</h2>
+        <form action="/admin/novedades/modificar" method="post" enctype="multipart/form-data">
+            <input type="hidden" value="{{novedad.id}}" name="id">
+            <div class="mb-3">
+                <input type="text" class="form-control" name="titulo" value="{{novedad.titulo}}">
+            </div>
+            <div class="mb-3">
+                <textarea type="text" class="form-control" name="subtitulo">{{novedad.subtitulo}}</textarea>
+            </div>
+            <div class="mb-3">
+                <textarea type="text" class="form-control" name="cuerpo">{{novedad.cuerpo}}</textarea>
+            </div> 
+            <div class="mb-3">
+                <p>
+                <label>Imagen: <input type="file" class="form-control" name="imagen" id="imagen" /></label></p>
+                <p>
+                    <label><input type="checkbox" name="img_delete" id+"img_delete" value="1">
+                    Desea eliminar la imagen actual?</label>
+                    <input type="hidden" name="img_original" value="{{novedad.img_id}}">
+                </p>
+            </div>             
+            <div class="mb-3 text-end">
+                <button type="submit" class="btn btn-primary">Modificar</button>
+            </div>                      
+        </form>
+        {{#if error}}
+            <p>{{message}}</p>
+        {{/if}}
+    </section>
+    <aside>
+        <figure>
+            <blockquote class="blockquote">
+                <p>El mundo es un libro, y quienes no viajan leen sólo una página.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer text-end">
+                <cite title="Source Title">San Agustín</cite>
+            </figcaption>
+        </figure>
+    </aside>
+</div>

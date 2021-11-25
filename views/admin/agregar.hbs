@@ -1,0 +1,35 @@
+<div id="contenedor">
+    <section>
+        <h2>Alta de novedad</h2>
+        <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <input type="text" class="form-control" name="titulo" placeholder="Título">
+            </div>
+            <div class="mb-3">
+                <textarea type="text" class="form-control" name="subtitulo" placeholder="Subtítulo"></textarea>
+            </div>
+            <div class="mb-3">
+                <textarea type="text" class="form-control" name="cuerpo" placeholder="Descripción"></textarea>
+            </div> 
+            <div class="mb-3">
+                <label>Imagen: <input type="file" class="form-control" name="imagen" id="imagen" /></label>
+            </div>            
+            <div class="mb-3 text-end">
+                <button type="submit" class="btn btn-primary">Agregar</button>
+            </div>                      
+        </form>
+        {{#if error}}
+            <p>{{message}}</p>
+        {{/if}}
+    </section>
+    <aside>
+        <figure>
+            <blockquote class="blockquote">
+                <p>El mundo es un libro, y quienes no viajan leen sólo una página.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer text-end">
+                <cite title="Source Title">San Agustín</cite>
+            </figcaption>
+        </figure>
+    </aside>
+</div>

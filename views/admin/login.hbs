@@ -1,0 +1,49 @@
+<div id="contenedor">
+    <section>
+        {{#if messages}}
+            <p>{{messages}}</p>
+        {{/if}}        
+        <h2>Formulario de login</h2>
+        <form id="loginform" action="/admin/login" method="post" class="row gy-2 gx-3 align-items-center">
+            <div class="row">
+                <div class="col-lg-1">
+                    <div class="icono"><i class="fa fa-user"></i></div>
+                </div>
+                <div class="col-lg-11">
+                    <label class="visually-hidden" for="autoSizingInput">Usuario</label>
+                    <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1">
+                    <div class="icono"><i class="fas fa-key"></i></div>
+                </div>
+                <div class="col-lg-11">
+                    <label class="visually-hidden" for="autoSizingInput">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10">
+                </div>
+                <div class="col-lg-2">
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                </div>
+            </div>
+        </form>
+        {{#if error}}
+            <p>Usuario o contraseña incorrecto</p>
+        {{/if}}
+        <p>¿Aún no tiene usuario? Puede registrarse <a href="/admin/signup">aquí</a></p>
+    </section>
+    <aside>
+        <figure>
+            <blockquote class="blockquote">
+                <p>El mundo es un libro, y quienes no viajan leen sólo una página.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer text-end">
+                <cite title="Source Title">San Agustín</cite>
+            </figcaption>
+        </figure>
+    </aside>
+</div>

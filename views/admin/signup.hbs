@@ -1,0 +1,51 @@
+<div id="contenedor">
+    <section>
+        <h2>Formulario de alta de usuario</h2>
+        <form action="/admin/signup" method="post" class="row gy-2 gx-3 align-items-center">
+            <div class="row">
+                <div class="col-lg-1">
+                    <div class="icono"><i class="fa fa-user"></i></div>
+                </div>
+                <div class="col-lg-11">
+                    <input type="text" class="form-control" name="usuario" placeholder="Usuario">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1">
+                    <div class="icono"><i class="fas fa-key"></i></div>
+                </div>
+                <div class="col-lg-11">
+                    <input type="password" class="form-control" name="password" placeholder="Contraseña">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1">
+                    <div class="icono"><i class="fas fa-key"></i></div>
+                </div>
+                <div class="col-lg-11">
+                    <input type="password" class="form-control" name="password2" placeholder="Vuelva a ingresar la contraseña">
+                </div>
+            </div>            
+            <div class="row">
+                <div class="col-lg-10">
+                </div>
+                <div class="col-lg-2">
+                    <button type="submit" class="btn btn-primary">Sign up</button>
+                </div>
+            </div>
+        </form>
+        {{#if error}}
+            <p>{{message}}</p>
+        {{/if}}        
+    </section>
+    <aside>
+        <figure>
+            <blockquote class="blockquote">
+                <p>El mundo es un libro, y quienes no viajan leen sólo una página.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer text-end">
+                <cite title="Source Title">San Agustín</cite>
+            </figcaption>
+        </figure>
+    </aside>
+</div>
